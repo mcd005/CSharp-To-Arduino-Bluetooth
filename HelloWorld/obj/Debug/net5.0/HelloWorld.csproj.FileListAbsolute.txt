@@ -1,0 +1,16 @@
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\bin\Debug\net5.0\HelloWorld.exe
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\bin\Debug\net5.0\HelloWorld.deps.json
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\bin\Debug\net5.0\HelloWorld.runtimeconfig.json
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\bin\Debug\net5.0\HelloWorld.runtimeconfig.dev.json
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\bin\Debug\net5.0\HelloWorld.dll
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\bin\Debug\net5.0\ref\HelloWorld.dll
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\bin\Debug\net5.0\HelloWorld.pdb
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\obj\Debug\net5.0\HelloWorld.csprojAssemblyReference.cache
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\obj\Debug\net5.0\HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\obj\Debug\net5.0\HelloWorld.AssemblyInfoInputs.cache
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\obj\Debug\net5.0\HelloWorld.AssemblyInfo.cs
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\obj\Debug\net5.0\HelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\obj\Debug\net5.0\HelloWorld.dll
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\obj\Debug\net5.0\ref\HelloWorld.dll
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\obj\Debug\net5.0\HelloWorld.pdb
+C:\Users\jpmcd\Documents\Coding Projects and Practice\VR Bomb Disposal Robot\Bluetooth_Script\HelloWorld\obj\Debug\net5.0\HelloWorld.genruntimeconfig.cache
