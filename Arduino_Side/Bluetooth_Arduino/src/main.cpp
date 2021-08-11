@@ -1,26 +1,18 @@
 #include <Arduino.h>
 
-int state = 0;
-
-void setup() {
-  Serial1.begin(38400); // Default communication rate of the Bluetooth module
+void setup()
+{
+    // initialize both serial ports:
+    Serial.begin(9600);
+    Serial1.begin(9600); // I was getting garbage with a baud rate of 38400, even though that is what is suggested for the HC05
 }
 
 void loop()
 {
-    if (Serial.available() > 0)
-    {                          // Checks whether data is comming from the serial port
-        state = Serial.read(); // Reads the data from the serial port
-        Seri
-    }
-    if (state == '0')
+    // read from port 1, send to port 0:
+    if (Serial1.available())
     {
-        Serial.println("LED: OFF"); // Send back, to the phone, the String "LED: ON"
-        state = 0;
-    }
-    else if (state == '1')
-    {
-        Serial.println("LED: ON");
-        state = 0;
+        char inByte = Serial1.read(); // Read takes a single byte off the top of the buffer. Serial.available() would return 0 if called again
+        Serial.write(inByte); // Writes binary data to the SerialPort. Will convert from int to ASCII char quite happily (hence prints NULL if you try to print 0)
     }
 }
