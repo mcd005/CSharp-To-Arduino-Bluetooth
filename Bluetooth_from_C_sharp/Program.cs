@@ -4,6 +4,9 @@
 using System;
 using System.IO.Ports;
 using System.Threading;
+using System.Collections.ObjectModel;
+using Windows.Devices.Enumeration;
+using Windows.Devices.Bluetooth;
 
 public class PortChat
 {
@@ -12,6 +15,8 @@ public class PortChat
 
     public static void Main()
     {
+
+  
         string name;
         string message;
         StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
@@ -58,6 +63,12 @@ public class PortChat
 
         readThread.Join();
         _serialPort.Close();
+    }
+
+
+    private async void EnumeratePairedDevice()
+    {
+        DeviceInformationCollection PairedBluetoothDevices = await DeviceInformation.FindAllAsync(BluetoothDevice.GetDeviceSelectorFromPairingState(true));
     }
 
     public static void Read()
