@@ -20,12 +20,6 @@ void loop()
         Serial.write(inByte); // Writes binary data to the SerialPort. Will convert from int to ASCII char quite happily (hence prints NULL if you try to print 0)
     }
 
-    // if (Serial1.available())
-    // {
-    //     String phraseFromBT = Serial1.readString(); // Reads the entire buffer into the string but will be slow if timeout is large i.e > 10 ms
-    //     Serial.println(phraseFromBT);
-    // }
-
     // read from port 0 (i.e. USB), send to port 0:
     if (Serial.available())
     {
