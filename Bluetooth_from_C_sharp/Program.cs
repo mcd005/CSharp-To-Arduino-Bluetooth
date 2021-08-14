@@ -4,12 +4,6 @@
 using System;
 using System.IO.Ports;
 using System.Threading;
-using System.Collections.ObjectModel;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using Windows.Devices.Enumeration;
-using Windows.Devices.Bluetooth;
-using InTheHand.Net.Sockets;
 
 public class PortChat
 {
@@ -18,16 +12,6 @@ public class PortChat
 
     public static void Main()
     {
-
-        BluetoothClient client = new BluetoothClient();
-        List<string> items = new List<string>();
-        BluetoothDeviceInfo[] devices = client.DiscoverDevicesInRange();
-        foreach (BluetoothDeviceInfo d in devices)
-        {
-            System.Console.WriteLine(d.DeviceName);
-            items.Add(d.DeviceName);
-        }
-
         string name;
         string message;
         StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
@@ -74,11 +58,6 @@ public class PortChat
 
         readThread.Join();
         _serialPort.Close();
-    }
-
-    private async void EnumeratePairedDevice()
-    {
-        DeviceInformationCollection PairedBluetoothDevices = await DeviceInformation.FindAllAsync(BluetoothDevice.GetDeviceSelectorFromPairingState(true));
     }
 
     public static void Read()
