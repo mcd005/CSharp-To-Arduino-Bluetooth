@@ -16,6 +16,7 @@ public class PortChat
         string message;
         StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
         Thread readThread = new Thread(Read);
+        Random rnd = new Random();
 
         // Create a new SerialPort object with default settings.
         _serialPort = new SerialPort();
@@ -36,28 +37,23 @@ public class PortChat
         _continue = true;
         readThread.Start();
 
-        Console.Write("Name: ");
+        Console.Write("Start sending data?");
         name = Console.ReadLine();
 
-        Console.WriteLine("Type QUIT to exit");
-
-        while (_continue)
+        for (int i = 0; i < 200; ++i)
         {
-            message = Console.ReadLine();
-
-            if (stringComparer.Equals("quit", message))
-            {
-                _continue = false;
-            }
-            else
-            {
-                _serialPort.WriteLine(
-                    String.Format("<{0}>: {1}", name, message));
-            }
+            _serialPort.WriteLine(
+                    String.Format("W{0},S{1},E{2},P{3},R{4}", RandAngle(rnd), RandAngle(rnd),RandAngle(rnd),RandAngle(rnd),RandAngle(rnd)));
+            System.Threading.Thread.Sleep(100);
         }
 
         readThread.Join();
         _serialPort.Close();
+    }
+
+    public static int RandAngle(Random rng)
+    {
+        return rng.Next(0, 180);
     }
 
     public static void Read()
