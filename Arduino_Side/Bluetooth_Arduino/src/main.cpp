@@ -6,7 +6,7 @@ void setup()
     Serial.begin(9600);
     Serial.setTimeout(10);
 
-    Serial1.begin(38400); // You will need to go into AT mode on the HC05 to check the baud rate. By default it's 38400
+    Serial1.begin(9600); // You will need to go into AT mode on the HC05 to check the baud rate. By default it's 38400
     Serial1.setTimeout(10);
 }
 
