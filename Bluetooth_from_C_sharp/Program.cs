@@ -13,7 +13,6 @@ public class PortChat
     public static void Main()
     {
         string name;
-        string message;
         StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
         Thread readThread = new Thread(Read);
         Random rnd = new Random();
@@ -40,7 +39,7 @@ public class PortChat
         Console.Write("Start sending data?");
         name = Console.ReadLine();
 
-        for (int i = 0; i < 200; ++i)
+        for (int i = 0; i < 1; ++i)
         {
             _serialPort.WriteLine(
                     String.Format("W{0},S{1},E{2},P{3},R{4}", RandAngle(rnd), RandAngle(rnd),RandAngle(rnd),RandAngle(rnd),RandAngle(rnd)));
