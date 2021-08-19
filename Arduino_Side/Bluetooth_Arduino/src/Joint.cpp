@@ -1,15 +1,19 @@
+#include <Adafruit_PWMServoDriver.h>
 #include <Arduino.h>
 #include "Joint.hpp"
 
-#define MIN_PULSE_USEC 500
-#define MAX_PULSE_USEC 2500
+#define MIN_PULSE_WIDTH 150
+#define MAX_PULSE_WIDTH 500
 #define FREQUENCY 50
+#define PULSE_ON 15
+#define INCREMENT_DELAY_USECS 10
 
-Joint::Joint(String name, uint16_t startAngle, uint16_t channel) :
+Joint::Joint(String name, uint16_t startAngle, uint16_t channel, Adafruit_PWMServoDriver* pwmObject) :
     jointName(name),
     currentAngle(startAngle),
     targetAngle(startAngle),
-    jointChannel(channel)
+    jointChannel(channel),
+    pwm(pwmObject)
 {
 }
 
@@ -25,13 +29,11 @@ void Joint::incrementPosition()
     {
         if (currentAngle < targetAngle) ++currentAngle;
         if (currentAngle > targetAngle) --currentAngle;
-        // pwm.setPWM(jointChannel, 0, calculatePulseWidth(currentAngle));
+        pwm->setPWM(jointChannel, PULSE_ON, calculatePulseWidth(currentAngle));
     }
 }
 
 int Joint::calculatePulseWidth(uint16_t angle)
 {
-    int pulseDurationUsec, pulse_width;
-    pulseDurationUsec = map(angle, 0, 180, MIN_PULSE_USEC, MAX_PULSE_USEC);
-    pulse_width = int(float(pulseDurationUsec) / 1000000 * FREQUENCY * 4096);
+    return map(angle, 0, 180, MIN_PULSE_WIDTH , MAX_PULSE_WIDTH);
 }
